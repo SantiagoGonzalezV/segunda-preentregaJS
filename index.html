@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Pagos en Cuotas</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Pagos en Cuotas</h1>
+        
+        <!-- Formulario de Registro -->
+        <div id="registroForm">
+            <h2>¿Aún no tienes cuenta? Aquí puedes hacer tu registro de usuario</h2>
+            <div class="form-group">
+                <label for="regNombre">Nombre Completo (Ej: Santiago González):</label>
+                <input type="text" id="regNombre" required>
+                
+                <label for="regUsuario">Usuario:</label>
+                <input type="text" id="regUsuario" required>
+                
+                <label for="regPassword">Contraseña:</label>
+                <input type="password" id="regPassword" required>
+                
+                <button id="btnRegistrar">Registrar</button>
+            </div>
+        </div>
+
+        <!-- Formulario de Login -->
+        <div id="loginForm">
+            <h2>Iniciar Sesión</h2>
+            <div class="form-group">
+                <label for="loginUsuario">Usuario:</label>
+                <input type="text" id="loginUsuario" required>
+                
+                <label for="loginPassword">Contraseña:</label>
+                <input type="password" id="loginPassword" required>
+                
+                <button id="btnLogin">Iniciar Sesión</button>
+            </div>
+        </div>
+
+        <!-- Simulador (inicialmente oculto) -->
+        <div id="simuladorContainer" class="hidden">
+            <h2>Simulador de Préstamo</h2>
+            <button id="btnSimular">Iniciar Simulación</button>
+            <button id="btnCerrarSesion">Cerrar Sesión</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
